@@ -1,0 +1,32 @@
+Date,Disruption_Type,Affected_Flight,Affected_Crew,Original_Plan,New_Status,Reason,Impact_Duration_Minutes
+2023-10-01,Delay,6E101,,Dep 06:00 UTC,Dep 07:15 UTC,ATC Restrictions,75
+2023-10-02,Sickness,6E205,FO002,Dep 09:00 UTC,Medical Unavailable,Food Poisoning,0
+2023-10-03,Technical,6E307,CP001,Dep 12:30 UTC,Unavailable,Engine Check,120
+2023-10-04,Weather,6E412,,Dep 14:00 UTC,Dep 15:30 UTC,Thunderstorms at CCU,90
+2023-10-05,Cancellation,6E731,,Dep 18:00 UTC,Flight Cancelled,Cyclone Alert at AMD,0
+2023-10-06,Delay,6E902,,Dep 07:00 UTC,Dep 08:00 UTC,Technical Inspection,60
+2023-10-07,Sickness,6E101,FO003,Dep 06:00 UTC,Medical Unavailable,Flu,0
+2023-10-08,Delay,6E205,,Dep 09:00 UTC,Dep 10:30 UTC,ATC Restrictions,90
+2023-10-09,Technical,6E307,CP002,Dep 12:30 UTC,Unavailable,Hydraulic Issue,150
+2023-10-10,Weather,6E412,,Dep 14:00 UTC,Dep 15:15 UTC,Heavy Rain at CCU,75
+2023-10-11,Cancellation,6E731,,Dep 18:00 UTC,Flight Cancelled,Runway Closure,0
+2023-10-12,Delay,6E902,,Dep 07:00 UTC,Dep 08:20 UTC,ATC Delay,80
+2023-10-13,Sickness,6E101,CP001,Dep 06:00 UTC,Medical Unavailable,Stomach Infection,0
+2023-10-14,Technical,6E205,FO001,Dep 09:00 UTC,Unavailable,Engine Maintenance,130
+2023-10-15,Weather,6E307,,Dep 12:30 UTC,Dep 13:45 UTC,Thunderstorms,75
+2023-10-16,Delay,6E412,,Dep 14:00 UTC,Dep 15:00 UTC,ATC Restrictions,60
+2023-10-17,Cancellation,6E731,,Dep 18:00 UTC,Flight Cancelled,Fog at AMD,0
+2023-10-18,Sickness,6E902,FO003,Dep 07:00 UTC,Medical Unavailable,Cold,0
+2023-10-19,Technical,6E101,CP002,Dep 06:00 UTC,Unavailable,Avionics Check,100
+2023-10-20,Weather,6E205,,Dep 09:00 UTC,Dep 10:10 UTC,Heavy Rain at BOM,70
+2023-10-21,Delay,6E307,,Dep 12:30 UTC,Dep 13:50 UTC,ATC Restrictions,80
+2023-10-22,Sickness,6E412,FO001,Dep 14:00 UTC,Medical Unavailable,Flu,0
+2023-10-23,Technical,6E731,CP001,Dep 18:00 UTC,Unavailable,Engine Check,120
+2023-10-24,Weather,6E902,,Dep 07:00 UTC,Dep 08:10 UTC,Thunderstorms,70
+2023-10-25,Delay,6E101,,Dep 06:00 UTC,Dep 07:30 UTC,ATC Delay,90
+2023-10-26,Cancellation,6E205,,Dep 09:00 UTC,Flight Cancelled,Cyclone Alert at BOM,0
+2023-10-27,Technical,6E307,CP003,Dep 12:30 UTC,Unavailable,Hydraulic Issue,140
+2023-10-28,Weather,6E412,,Dep 14:00 UTC,Dep 15:20 UTC,Heavy Rain,80
+2023-10-29,Sickness,6E731,FO002,Dep 18:00 UTC,Medical Unavailable,Stomach Infection,0
+2023-10-30,Delay,6E902,,Dep 07:00 UTC,Dep 08:15 UTC,ATC Restrictions,75
+2023-10-31,Technical,6E101,CP001,Dep 06:00 UTC,Unavailable,Engine Inspection,110

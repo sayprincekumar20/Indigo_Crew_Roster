@@ -1,0 +1,11 @@
+Airport_Code,Airport_Name,City,Time_Zone,Curfew_Start,Curfew_End
+DEL,Indira Gandhi International,Delhi,IST+5.5,,
+BOM,Chhatrapati Shivaji Maharaj,Mumbai,IST+5.5,00:00,06:00
+BLR,Kempegowda International,Bengaluru,IST+5.5,,
+MAA,Chennai International,Chennai,IST+5.5,,
+CCU,Netaji Subhas Chandra Bose,Kolkata,IST+5.5,00:30,06:00
+HYD,Rajiv Gandhi International,Hyderabad,IST+5.5,,
+GOI,Manohar International,Goa,IST+5.5,00:00,06:00
+AMD,Sardar Vallabhbhai Patel,Ahmedabad,IST+5.5,,
+PNQ,Pune International,Pune,IST+5.5,00:00,06:00
+COK,Cochin International,Kochi,IST+5.5,00:00,06:00

@@ -1,0 +1,11 @@
+Rule_Category,Parameter,Value,Conditions
+Duty_Time,Max_FDP_Hours,12,Standard reporting time
+Duty_Time,Max_FDP_Hours,14,Early morning reporting with reduced sectors
+Rest_Period,Min_Rest_Hours,12,After standard duty
+Rest_Period,Min_Rest_Hours,10,Reduced rest with crew consent
+Weekly_Rest,Consecutive_Hours,36,In any 7-day period
+Monthly_Limit,Flight_Hours,125,Maximum in any calendar month
+Quarterly_Limit,Flight_Hours,350,Maximum in any 3 consecutive months
+Annual_Limit,Flight_Hours,1000,Maximum in any calendar year
+Flight_Duty,Max_Sectors,6,Maximum sectors in single duty
+Flight_Duty,Max_Sectors,4,Night duty maximum sectors

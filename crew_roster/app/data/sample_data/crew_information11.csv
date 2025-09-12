@@ -1,0 +1,17 @@
+Crew_ID,Name,Base,Rank,Qualification,Aircraft_Type_License,Leave_Start,Leave_End
+CP001,Amit Sharma,DEL,Captain,Line Checked,"A320neo, A321neo",,
+CP002,Rajiv Singh,DEL,Captain,Line Checked,A320neo,2023-10-10,2023-10-12
+CP003,Neha Patel,DEL,Captain,Line Checked,A321neo,,
+CP004,Sanjay Kumar,DEL,Captain,Base Check,A320neo,2023-10-15,2023-10-17
+FO001,Karan Mehta,DEL,First Officer,Line Checked,"A320neo, A321neo",,
+FO002,Sunil Joshi,DEL,First Officer,Line Checked,A320neo,,
+FO003,Priya Reddy,DEL,First Officer,Base Check,A321neo,2023-10-05,2023-10-08
+FO004,Ankit Verma,DEL,First Officer,Line Checked,"A320neo, A321neo",,
+CC001,Nandini Das,DEL,Purser,Senior,"A320neo, A321neo",,
+CC002,Preeti Choudhury,DEL,FA,Junior,A320neo,,
+CC003,Rahul Ahmed,DEL,FA,Junior,A321neo,2023-10-03,2023-10-04
+CC004,Simran Kapoor,DEL,FA,Junior,"A320neo, A321neo",,
+CC005,Arjun Malhotra,DEL,FA,Senior,A320neo,,
+CC006,Meera Nair,DEL,FA,Junior,A321neo,2023-10-08,2023-10-10
+CC007,Vikram Singh,DEL,FA,Junior,A320neo,,
+CC008,Anjali Mehta,DEL,Purser,Senior,A321neo,,

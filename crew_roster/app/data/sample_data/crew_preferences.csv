@@ -1,0 +1,51 @@
+Crew_ID,Preference_Type,Preference_Detail,Priority
+CP001,Day_Off,2023-10-07,High
+CP002,Preferred_Sector,DEL-BLR,Medium
+CP003,Avoid_Late_Night,Duties ending after 23:00 UTC,Medium
+CP004,Preferred_Aircraft,A320neo,Low
+CP005,Day_Off,2023-10-21,High
+CP006,Max_Duty_Days,6,Low
+SFO001,Day_Off,2023-10-09,Medium
+SFO002,Preferred_Sector,DEL-HYD,Medium
+SFO003,Avoid_Early_Morning,Duties starting before 05:00 UTC,High
+SFO004,Preferred_Aircraft,A321neo,Low
+SFO005,Day_Off,2023-10-19,High
+FO001,Day_Off,2023-10-12,High
+FO002,Preferred_Sector,DEL-MAA,Low
+FO003,Consecutive_Days_Off,2,Medium
+FO004,Max_Duty_Days,5,Medium
+FO005,Avoid_Late_Night,Duties ending after 22:30 UTC,Medium
+ICP001,Day_Off,2023-10-11,High
+ICP002,Preferred_Aircraft,A320neo,Low
+ICP003,Max_Duty_Days,4,Medium
+TFO001,Preferred_Sector,DEL-BOM,Low
+TFO002,Day_Off,2023-10-16,High
+CC001,Day_Off,2023-10-15,High
+CC002,Preferred_Base,DEL,Low
+CC003,Avoid_Early_Morning,Duties starting before 04:00 UTC,High
+CC004,Day_Off,"2023-10-08, 2023-10-09",High
+CC005,Preferred_Aircraft,A321neo,Medium
+SCCM001,Day_Off,2023-10-09,High
+SCCM002,Preferred_Sector,DEL-PNQ,Low
+SCCM003,Avoid_Late_Night,Duties ending after 23:00 UTC,Medium
+SCCM004,Day_Off,2023-10-23,High
+SCC001,Preferred_Aircraft,A320neo,Low
+SCC002,Day_Off,2023-10-06,High
+SCC003,Preferred_Sector,DEL-CCU,Medium
+SCC004,Avoid_Early_Morning,Duties starting before 05:00 UTC,Medium
+SCC005,Max_Duty_Days,6,Low
+JCC001,Preferred_Sector,DEL-BLR,Low
+JCC002,Day_Off,2023-10-19,High
+JCC003,Avoid_Late_Night,Duties ending after 22:30 UTC,Medium
+JCC004,Preferred_Aircraft,A320neo,Low
+JCC005,Day_Off,2023-10-13,High
+JCC006,Max_Duty_Days,5,Medium
+JCC007,Preferred_Sector,DEL-MAA,Low
+JCC008,Consecutive_Days_Off,2,Medium
+JCC009,Day_Off,2023-10-17,High
+JCC010,Avoid_Early_Morning,Duties starting before 04:30 UTC,Medium
+TCC001,Preferred_Aircraft,A320neo,Low
+TCC002,Day_Off,2023-10-16,High
+TCC003,Preferred_Sector,DEL-IXC,Low
+TCC004,Max_Duty_Days,5,Medium
+TCC005,Day_Off,2023-10-29,High
