@@ -32,7 +32,7 @@ SCCM004,Rohan Kapoor,DEL,SCCM (Lead Cabin Crew),Senior,"A320neo, A321neo",2023-1
 SCC001,Neha Reddy,DEL,Senior Cabin Crew,Senior,A320neo,,
 SCC002,Rajiv Kumar,DEL,Senior Cabin Crew,Senior,A321neo,,
 SCC003,Sunita Patel,DEL,Senior Cabin Crew,Senior,"A320neo, A321neo",2023-10-05,2023-10-07
-SCC004,Ankit Sharma,DEL,Senior Cabin Crew,Senior,A320neo,,
+SCC004,Ankit Sharma,BOM,Senior Cabin Crew,Senior,A320neo,,
 SCC005,Priya Singh,DEL,Senior Cabin Crew,Senior,A321neo,,
 JCC001,Rahul Mehta,DEL,Junior Cabin Crew,Junior,A320neo,,
 JCC002,Meera Gupta,DEL,Junior Cabin Crew,Junior,A321neo,2023-10-18,2023-10-20
@@ -44,36 +44,58 @@ JCC007,Rohan Sharma,DEL,Junior Cabin Crew,Junior,A321neo,,
 JCC008,Pooja Kumar,DEL,Junior Cabin Crew,Junior,"A320neo, A321neo",2023-10-25,2023-10-27
 JCC009,Vikram Gupta,DEL,Junior Cabin Crew,Junior,A320neo,,
 JCC010,Sunil Singh,DEL,Junior Cabin Crew,Junior,A321neo,,
-TCC001,Anjali Rao,DEL,Trainee Cabin Crew,Training,A320neo,,
+TCC001,Anjali Rao,BOM,Trainee Cabin Crew,Training,A320neo,,
 TCC002,Rajesh Patel,DEL,Trainee Cabin Crew,Training,A321neo,2023-10-15,2023-10-17
 TCC003,Meera Kapoor,DEL,Trainee Cabin Crew,Training,"A320neo, A321neo",,
 TCC004,Arjun Reddy,DEL,Trainee Cabin Crew,Training,A320neo,,
 TCC005,Neha Malhotra,DEL,Trainee Cabin Crew,Training,A321neo,2023-10-28,2023-10-30
-
-
-
-
-
-
-Crew_ID,Name,Base,Rank,Qualification,Aircraft_Type_License,Leave_Start,Leave_End
-CP001,Amit Sharma,DEL,Captain,Line Checked,"A320neo, A321neo",,
-CP002,Rajiv Singh,BOM,Captain,Line Checked,A320neo,2023-10-10,2023-10-12
-CP003,Neha Patel,BLR,Captain,Line Checked,A321neo,,
-CP004,Sanjay Kumar,MAA,Captain,Base Check,A320neo,2023-10-15,2023-10-17
-CP005,Rohan Mehta,CCU,Captain,Line Checked,"A320neo, A321neo",2023-10-20,2023-10-22
-CP006,Ananya Singh,HYD,Captain,Base Check,A321neo,,
-SFO001,Karan Mehta,GOI,Senior First Officer,Line Checked,"A320neo, A321neo",,
-SFO002,Sunil Joshi,AMD,Senior First Officer,Line Checked,A320neo,,
-SFO003,Priya Reddy,PNQ,Senior First Officer,Base Check,A321neo,2023-10-05,2023-10-08
-SFO004,Ankit Verma,COK,Senior First Officer,Line Checked,"A320neo, A321neo",,
-SFO005,Vikram Patel,BOM,Senior First Officer,Base Check,A320neo,2023-10-18,2023-10-19
-FO001,Rahul Sharma,DEL,First Officer,Line Checked,A320neo,,
-FO002,Meera Singh,BLR,First Officer,Base Check,A321neo,2023-10-12,2023-10-14
-FO003,Arjun Kumar,MAA,First Officer,Line Checked,"A320neo, A321neo",,
-FO004,Neha Gupta,CCU,First Officer,Base Check,A320neo,,
-FO005,Siddharth Rao,HYD,First Officer,Line Checked,A321neo,2023-10-25,2023-10-27
-ICP001,Rajesh Khanna,GOI,Instructor/Check Pilot,Line Checked,"A320neo, A321neo",,
-ICP002,Sunita Devi,AMD,Instructor/Check Pilot,Base Check,A320neo,2023-10-08,2023-10-10
-ICP003,Anil Kapoor,PNQ,Instructor/Check Pilot,Line Checked,A321neo,,
-TFO001,Rohan Malhotra,COK,Trainee First Officer,Training,A320neo,,
-TFO002,Pooja Sharma,DEL,Trainee First Officer,Training,A321neo,2023-10-15,2023-10-17
+CP007,Manish Verma,DEL,Captain,Line Checked,"A320neo, A321neo",,
+CP008,Vikas Sharma,DEL,Captain,Line Checked,A320neo,2023-10-10,2023-10-12
+CP009,Shreya Nair,DEL,Captain,Line Checked,A321neo,,
+CP010,Ravi Menon,DEL,Captain,Base Check,A320neo,2023-10-15,2023-10-17
+CP011,Sahil Bhatia,DEL,Captain,Line Checked,"A320neo, A321neo",2023-10-20,2023-10-22
+CP012,Isha Gupta,DEL,Captain,Base Check,A321neo,,
+SFO006,Ashok Reddy,DEL,Senior First Officer,Line Checked,"A320neo, A321neo",,
+SFO007,Deepak Yadav,DEL,Senior First Officer,Line Checked,A320neo,,
+SFO008,Sonal Jain,DEL,Senior First Officer,Base Check,A321neo,2023-10-05,2023-10-08
+SFO009,Amitabh Rao,DEL,Senior First Officer,Line Checked,"A320neo, A321neo",,
+SFO010,Prakash Malhotra,DEL,Senior First Officer,Base Check,A320neo,2023-10-18,2023-10-19
+FO006,Kunal Sharma,DEL,First Officer,Line Checked,A320neo,,
+FO007,Divya Menon,DEL,First Officer,Base Check,A321neo,2023-10-12,2023-10-14
+FO008,Arvind Iyer,DEL,First Officer,Line Checked,"A320neo, A321neo",,
+FO009,Megha Kapoor,DEL,First Officer,Base Check,A320neo,,
+FO010,Sandeep Rao,DEL,First Officer,Line Checked,A321neo,2023-10-25,2023-10-27
+ICP004,Nitin Agarwal,DEL,Instructor/Check Pilot,Line Checked,"A320neo, A321neo",,
+ICP005,Kavita Joshi,DEL,Instructor/Check Pilot,Base Check,A320neo,2023-10-08,2023-10-10
+ICP006,Harish Nair,DEL,Instructor/Check Pilot,Line Checked,A321neo,,
+TFO003,Sachin Mishra,DEL,Trainee First Officer,Training,A320neo,,
+TFO004,Komal Singh,DEL,Trainee First Officer,Training,A321neo,2023-10-15,2023-10-17
+CC006,Ritika Sharma,DEL,Purser,Senior,"A320neo, A321neo",,
+CC007,Ananya Bose,DEL,Purser,Senior,A320neo,,
+CC008,Aditya Menon,DEL,Purser,Senior,A321neo,2023-10-03,2023-10-04
+CC009,Payal Khanna,DEL,Purser,Senior,"A320neo, A321neo",,
+CC010,Varun Iyer,DEL,Purser,Senior,A320neo,,
+SCCM005,Kirti Sharma,DEL,SCCM (Lead Cabin Crew),Senior,A321neo,2023-10-08,2023-10-10
+SCCM006,Mahesh Gupta,DEL,SCCM (Lead Cabin Crew),Senior,A320neo,,
+SCCM007,Rupa Rani,DEL,SCCM (Lead Cabin Crew),Senior,A321neo,,
+SCCM008,Devansh Kapoor,DEL,SCCM (Lead Cabin Crew),Senior,"A320neo, A321neo",2023-10-22,2023-10-24
+SCC006,Swati Sharma,DEL,Senior Cabin Crew,Senior,A320neo,,
+SCC007,Gaurav Mehta,DEL,Senior Cabin Crew,Senior,A321neo,,
+SCC008,Kiran Joshi,DEL,Senior Cabin Crew,Senior,"A320neo, A321neo",2023-10-05,2023-10-07
+SCC009,Manoj Verma,BOM,Senior Cabin Crew,Senior,A320neo,,
+SCC010,Seema Nair,DEL,Senior Cabin Crew,Senior,A321neo,,
+JCC011,Parth Sharma,DEL,Junior Cabin Crew,Junior,A320neo,,
+JCC012,Anushka Nair,DEL,Junior Cabin Crew,Junior,A321neo,2023-10-18,2023-10-20
+JCC013,Vivek Rao,DEL,Junior Cabin Crew,Junior,"A320neo, A321neo",,
+JCC014,Shalini Menon,DEL,Junior Cabin Crew,Junior,A320neo,,
+JCC015,Karthik Iyer,DEL,Junior Cabin Crew,Junior,A321neo,2023-10-12,2023-10-14
+JCC016,Priyanka Das,DEL,Junior Cabin Crew,Junior,A320neo,,
+JCC017,Naveen Sharma,DEL,Junior Cabin Crew,Junior,A321neo,,
+JCC018,Rachna Kapoor,DEL,Junior Cabin Crew,Junior,"A320neo, A321neo",2023-10-25,2023-10-27
+JCC019,Sameer Nair,DEL,Junior Cabin Crew,Junior,A320neo,,
+JCC020,Shruti Verma,DEL,Junior Cabin Crew,Junior,A321neo,,
+TCC006,Abhay Rao,BOM,Trainee Cabin Crew,Training,A320neo,,
+TCC007,Sapna Gupta,DEL,Trainee Cabin Crew,Training,A321neo,2023-10-15,2023-10-17
+TCC008,Mukesh Kumar,DEL,Trainee Cabin Crew,Training,"A320neo, A321neo",,
+TCC009,Kiran Reddy,DEL,Trainee Cabin Crew,Training,A320neo,,
+TCC010,Sonali Iyer,DEL,Trainee Cabin Crew,Training,A321neo,2023-10-28,2023-10-30

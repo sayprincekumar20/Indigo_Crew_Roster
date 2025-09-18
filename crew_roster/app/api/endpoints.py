@@ -511,6 +511,9 @@ async def disruption_chat(query: ChatQuery):
     """Chat interface for disruption handling"""
     try:
         chatbot = CrewDisruptionChatbot()
+
+        if not chatbot.llm_available:
+            raise HTTPException(status_code=400, detail="LLM service not available. Please configure Groq API.")
         
         # Simple chat response (you can enhance this)
         prompt = f"""
@@ -525,7 +528,7 @@ async def disruption_chat(query: ChatQuery):
         
         response = chatbot.llm.chat.completions.create(
             messages=[{"role": "user", "content": prompt}],
-            model=settings.groq_model,
+            model=chatbot.model_name,
             temperature=0.4
         )
         

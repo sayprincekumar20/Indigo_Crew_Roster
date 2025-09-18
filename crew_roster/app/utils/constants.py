@@ -171,6 +171,27 @@ SUCCESS_MESSAGES = {
 }
 
 
+
+# Rank hierarchy for replacement considerations
+RANK_HIERARCHY = {
+    'Captain': ['Senior Captain', 'Captain', 'Check Captain'],
+    'Senior First Officer': ['Captain', 'Senior First Officer', 'First Officer'],
+    'First Officer': ['Senior First Officer', 'First Officer', 'Junior First Officer'],
+    'Purser': ['Senior Purser', 'Purser', 'Senior Cabin Crew'],
+    'Senior Cabin Crew': ['Purser', 'Senior Cabin Crew', 'Cabin Crew'],
+    'Cabin Crew': ['Senior Cabin Crew', 'Cabin Crew', 'Trainee Cabin Crew']
+}
+
+# Base positioning times (hours)
+BASE_POSITIONING_TIMES = {
+    ('DEL', 'BOM'): 2.0,
+    ('DEL', 'BLR'): 2.5,
+    ('DEL', 'MAA'): 2.5,
+    ('BOM', 'BLR'): 1.5,
+    ('BOM', 'MAA'): 2.0,
+    ('BLR', 'MAA'): 1.0,
+}
+
 # app/utils/constants.py - Update MinimumCrewRequirements class
 
 class MinimumCrewRequirements:

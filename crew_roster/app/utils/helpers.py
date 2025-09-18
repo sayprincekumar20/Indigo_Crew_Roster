@@ -388,11 +388,24 @@ def validate_datetime_data(df: pd.DataFrame) -> bool:
 import pandas as pd
 from typing import Dict, List
 
+# app/utils/disruption_helpers.py
+from app.data.database import db_manager
+import json
+
 async def get_current_roster():
-    """Get the current active roster"""
-    # Implement this based on your data storage
-    # Could be from database or in-memory
-    return []
+    """Get the current active roster from the database"""
+    try:
+        # Fetch the latest roster from the database
+        result = db_manager.fetch_one(
+            "SELECT roster_data FROM generated_rosters ORDER BY created_at DESC LIMIT 1"
+        )
+        if result and result[0]:
+            return json.loads(result[0])
+        else:
+            return []
+    except Exception as e:
+        logger.error(f"Error fetching current roster: {e}")
+        return []
 
 async def validate_replacement(replacement: Dict) -> Dict:
     """Validate a replacement suggestion"""
