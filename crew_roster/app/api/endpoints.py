@@ -545,24 +545,39 @@ async def disruption_chat(query: ChatQuery):
 async def apply_disruption_replacement(replacement: Dict):
     """Apply a crew replacement for disruption"""
     try:
-        # Validate replacement
+        logger.info(f"Received replacement request: {replacement}")
+        
+        # Validate replacement - ADD AWAIT
         validation_result = await validate_replacement(replacement)
         
         if not validation_result['valid']:
+            logger.warning(f"Validation failed: {validation_result['issues']}")
             raise HTTPException(status_code=400, detail=f"Invalid replacement: {validation_result['issues']}")
         
-        # Apply replacement to roster
+        # Apply replacement to roster - ADD AWAIT
         updated_roster = await apply_replacement_to_roster(replacement)
         
-        # Save updated roster
-        await save_updated_roster(updated_roster)
+        # Check if there's an error in the result
+        if 'error' in updated_roster:
+            logger.error(f"Error applying replacement: {updated_roster['error']}")
+            raise HTTPException(status_code=400, detail=updated_roster['error'])
         
+        # Save updated roster - ADD AWAIT
+        save_success = await save_updated_roster(updated_roster['roster'])
+        
+        if not save_success:
+            logger.error("Failed to save updated roster")
+            raise HTTPException(status_code=500, detail="Failed to save updated roster")
+        
+        logger.info("Replacement applied successfully")
         return {
             "status": "success",
             "message": "Replacement applied successfully",
             "updated_roster_id": updated_roster['id']
         }
         
+    except HTTPException:
+        raise
     except Exception as e:
         logger.error(f"Error applying replacement: {e}")
         raise HTTPException(status_code=500, detail=f"Error applying replacement: {str(e)}")

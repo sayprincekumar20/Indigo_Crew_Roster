@@ -393,31 +393,119 @@ from app.data.database import db_manager
 import json
 
 async def get_current_roster():
-    """Get the current active roster from the database"""
+    """Get current roster from database"""
     try:
-        # Fetch the latest roster from the database
-        result = db_manager.fetch_one(
-            "SELECT roster_data FROM generated_rosters ORDER BY created_at DESC LIMIT 1"
-        )
-        if result and result[0]:
-            return json.loads(result[0])
-        else:
-            return []
+        # This should return the actual roster data, not a coroutine
+        result = db_manager.execute_query("SELECT roster_data FROM generated_rosters ORDER BY created_at DESC LIMIT 1")
+        row = result.fetchone()
+        if row:
+            return json.loads(row[0])
+        return None
     except Exception as e:
-        logger.error(f"Error fetching current roster: {e}")
-        return []
+        logger.error(f"Error getting current roster: {e}")
+        return None
 
 async def validate_replacement(replacement: Dict) -> Dict:
     """Validate a replacement suggestion"""
-    # Implement validation logic
-    return {"valid": True, "issues": []}
+    issues = []
+    
+    # Check if original crew exists (accept both original_crew and disrupted_crew_id)
+    original_crew = replacement.get('original_crew') or replacement.get('disrupted_crew_id')
+    if not original_crew:
+        issues.append("Original crew ID is required")
+    
+    # Check if replacements are provided
+    replacements = replacement.get('replacements', [])
+    if not replacements:
+        issues.append("No replacements specified")
+    
+    # Validate each replacement
+    for rep in replacements:
+        flight_number = rep.get('flight_number')
+        new_crew = rep.get('new_crew')
+        
+        if not flight_number or flight_number.strip() == '':
+            issues.append("Flight number is required for replacement")
+        if not new_crew or new_crew.strip() == '':
+            issues.append("New crew ID is required for replacement")
+    
+    return {"valid": len(issues) == 0, "issues": issues}
 
 async def apply_replacement_to_roster(replacement: Dict):
     """Apply replacement to roster"""
-    # Implement roster modification logic
-    return {"id": "updated_roster_123"}
+    try:
+        # Get current roster
+        current_roster = await get_current_roster()
+        if not current_roster:
+            return {"id": None, "error": "No current roster found"}
+        
+        # Validate roster structure
+        if not isinstance(current_roster, list):
+            return {"id": None, "error": "Invalid roster format"}
+        
+        # Get original crew ID
+        original_crew = replacement.get('original_crew', '').strip()
+        replacements = replacement.get('replacements', [])
+        
+        # Apply each replacement
+        for rep in replacements:
+            flight_number = rep.get('flight_number', '').strip()
+            new_crew = rep.get('new_crew', '').strip()
+            
+            # Find the flight in the roster
+            flight_found = False
+            for flight in current_roster:
+                # Ensure flight has required properties
+                if not isinstance(flight, dict) or 'Flight_Number' not in flight:
+                    continue
+                    
+                if flight.get('Flight_Number') == flight_number:
+                    flight_found = True
+                    
+                    # Ensure Crew_Members exists and is a list
+                    if 'Crew_Members' not in flight or not isinstance(flight['Crew_Members'], list):
+                        return {"id": None, "error": f"Invalid crew data for flight {flight_number}"}
+                    
+                    # Find and replace the crew member
+                    crew_updated = False
+                    for crew_member in flight.get('Crew_Members', []):
+                        if not isinstance(crew_member, dict) or 'Crew_ID' not in crew_member:
+                            continue
+                            
+                        if crew_member.get('Crew_ID') == original_crew:
+                            crew_member['Crew_ID'] = new_crew
+                            crew_updated = True
+                            break
+                    
+                    if not crew_updated:
+                        return {"id": None, "error": f"Crew member {original_crew} not found in flight {flight_number}"}
+                    break
+            
+            if not flight_found:
+                return {"id": None, "error": f"Flight {flight_number} not found in roster"}
+        
+        return {"id": "updated_roster", "roster": current_roster}
+        
+    except Exception as e:
+        logger.error(f"Error applying replacement: {e}")
+        return {"id": None, "error": str(e)}
 
 async def save_updated_roster(roster: Dict):
     """Save updated roster"""
-    # Implement save logic
-    return True
+    try:
+        # Convert to JSON string
+        roster_json = json.dumps(roster)
+        
+        # Save to database (update the latest roster or create new entry)
+        result = db_manager.execute_query(
+            """INSERT INTO generated_rosters 
+            (roster_data, created_at) 
+            VALUES (?, datetime('now'))""",
+            (roster_json,)
+        )
+        db_manager.conn.commit()
+        
+        return True
+    except Exception as e:
+        logger.error(f"Error saving updated roster: {e}")
+        return False
